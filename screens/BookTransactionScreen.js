@@ -52,7 +52,7 @@ export default class TransactionScreen extends React.Component {
 
   initiateBookIssue = async ()=>{
     //add a transaction
-    db.collection("transaction").add({
+    db.collection("transactions").add({
       'studentId' : this.state.scannedStudentId,
       'bookId' : this.state.scannedBookId,
       'data' : firebase.firestore.Timestamp.now().toDate(),
